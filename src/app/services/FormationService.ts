@@ -7,6 +7,7 @@ export class FormationService {
 
   constructor(private formationApi: FormationApi){}
 
+  // Appel SYNCHRONE
   // getFormations(): Array<Formation> {
   //   return[
   //       new Formation('Module Angular'),
@@ -15,6 +16,7 @@ export class FormationService {
   //   ];
   // }
 
+  // Appel ASYNCHRONE
   getFormations(): Promise<Array <Formation> > {
       return this.formationApi.fetchFormation();
   }
